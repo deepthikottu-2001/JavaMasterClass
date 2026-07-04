@@ -1,19 +1,19 @@
 package course.inheritance;
 
-public class TempHuman extends Human {
-
-    public static void letsWalk(Human h){
-        h.walk();
-    }
+public class TempHuman  {
     public static void main(String[] args){
         Artists a = new Artists();
-        a.name = "Deepti";
+        Artists b = new Artists();
+        if(a.equals(b)){
+            System.out.println(" Both are equal");
+        }else{
 
-        Musician b = new Musician();
-        b.name = "Raj";
+            System.out.println(" Both are not equal");
+        }
 
-        letsWalk(a);
-        letsWalk(b);
     }
-}
+
+
+    }
+
 

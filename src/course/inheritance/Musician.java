@@ -1,7 +1,9 @@
 package course.inheritance;
 
 public class Musician extends Human{
-    public void keyBoard(){
+
+    Keyboard myKeyboard = new Keyboard();
+    public void playKeyBoard(){
         System.out.println(name + " is playing Keyboard now");
     }
 
@@ -16,7 +18,8 @@ public class Musician extends Human{
 
         a.walk();
         a.speak();
-        a.keyBoard();
+        a.playKeyBoard();
+        a.myKeyboard.playSound();
     }
 }
 
