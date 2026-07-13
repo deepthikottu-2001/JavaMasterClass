@@ -2,9 +2,9 @@ package course.exceptionpkg;
 
 public class ExceptionSample {
     public static void main(String[] args){
-        int userInput = 0;
+        int userInput = 8;
         try{
-             userInput = Integer.parseInt("abc");
+             userInput = Integer.parseInt("1");
             String[] fruits = {"Bananas","Watermelon","Apples","Oranges"};
             System.out.println("User Picked "+ fruits[userInput-1]);
         }catch(NumberFormatException e){
@@ -14,12 +14,10 @@ public class ExceptionSample {
 
             System.out.println("Give numbers between 1 to 4");
         }catch(Exception e){
-
             System.out.println("Something went wrong");
+        }finally {
+            System.out.println("It will execute always");
+
         }
 
-
-
-    }
-
-}
+}}
