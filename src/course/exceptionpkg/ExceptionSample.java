@@ -2,22 +2,26 @@ package course.exceptionpkg;
 
 public class ExceptionSample {
     public static void main(String[] args){
-        int userInput = 8;
+
         try{
-             userInput = Integer.parseInt("1");
-            String[] fruits = {"Bananas","Watermelon","Apples","Oranges"};
-            System.out.println("User Picked "+ fruits[userInput-1]);
+            doSomething();
+
         }catch(NumberFormatException e){
             System.out.println("Invalid Number. You have to give only numbers. ");
 
         }catch(ArrayIndexOutOfBoundsException e){
-
-            System.out.println("Give numbers between 1 to 4");
+            throw new ArrayIndexOutOfBoundsException("Give numbere between 1 to 4");
         }catch(Exception e){
             System.out.println("Something went wrong");
-        }finally {
-            System.out.println("It will execute always");
-
         }
 
-}}
+}
+      public static void doSomething() throws ArrayIndexOutOfBoundsException, NumberFormatException{
+          int userInput = 0;
+          userInput = Integer.parseInt("8");
+          String[] fruits = {"Bananas","Watermelon","Apples","Oranges"};
+          System.out.println("User Picked "+ fruits[userInput-1]);
+
+      }
+
+}
