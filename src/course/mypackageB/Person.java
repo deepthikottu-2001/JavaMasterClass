@@ -6,7 +6,7 @@ public class Person {
     public int age;
     public String gender;
 
-    public Person() {
+    public Person(String alex, int i, String male) {
     }
 
     public void sleep() {
