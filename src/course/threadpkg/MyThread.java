@@ -1,6 +1,6 @@
 package course.threadpkg;
 
-public class MyThread extends Thread {
+public class MyThread implements Runnable {
 
 
     @Override
@@ -10,7 +10,8 @@ public class MyThread extends Thread {
         }
     }
     public static void main(String[] args){
-        MyThread t = new MyThread();
+        MyThread obj = new MyThread();
+        Thread t = new Thread(obj);
         t.start();
     }
 }
